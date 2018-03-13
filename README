@@ -1,0 +1,84 @@
+----------------------
+CrossbarControl Module
+-----------------------
+
+
+CorssbarControl module provides command line interface and PV interface
+to configure timing crossbar switch in AMC carrier.
+
+-------------------------------
+- Background of timing crossbar
+-------------------------------
+
+AMC carrier can route timing stream from 4 diffrent input to 4 diffrent output.
+
+Inputs: RTM_IN0, FPGA, Backplane (BP), RTM_IN1
+Output: RTM_OUT0, FPGA, BP, RTM_OUT1
+
+A crossbar switch is located for each output and we can choose one of input 
+for the particular output.
+
+Note) In our convention, RTM_IN0 for LCLS1 timing stream, RTM_IN1 for LCLS2 timing stream
+
+- How to build epics ioc application with CrossbarControl module
+
+1. configure/RELEASE should have CROSSBARCONTROL as the followings.
+
+ex) 
+CROSSBARCONTROL_MODULE_VERSION = crossbarControl-git
+CROSSBARCONTROL=$(EPICS_MODULES)/crossbarControl/$(CROSSBARCONTROL_MODULE_VERSION)
+
+2. src/Makefile shoud have the followings
+
+<application>_DBD += crossbarControl.dbd
+<application>_LIBS += crossbarControl
+
+
+3. if PV interface requires for application,
+   Db/Makefile should have the followigns:
+   
+DB_INSTALL += $(CROSSBARCONTROL)/db/crossbarCtrl.db
+
+
+-----------------------------------
+- How to use command line interface
+------------------------------------
+
+1. Use crossbarControlDriverConfigure() command to intialize the driver.
+The command requires path name for AmcCarrierCore/AxiSy56040.
+
+ex)
+crossbarControlDriverConfigure("mmio/AmcCarrierTimingGenerator/AmcCarrierCore/AxiSy56040")
+
+Note) the path name is depened on the application.
+
+
+2. How ot check up curent crossbar configuration
+The driver provides report for epics ioc shell command dbior()
+and, also provides report for own command crosbarControlDriverReport().
+
+ex)
+crossbarControlDriverReport()
+Timing Crossbar Status
+OutputConfig[0]: RTM_OUT0 <--- RTM_IN0 (LCLS1)
+OutputConfig[1]: FPGA <-- -FPGA
+OutputConfig[2]: BP <--- RTM_IN0 (LCLS1)
+OutputConfig[3]: RTM_OUT1 <--- FPGA
+
+
+3. How to set up the crossbar
+The driver provides command "corssbarControl(<output>, <source>)" to setup crossbar.
+For the output string, it allows RTM_OUT0 | FPGA | BP | RTM_OUT1.
+For the input string, it allows RTM_IN0 | FPGA | BP | RTM_IN1.
+For your convenience, RTM_IN0 can be replaced to LCLS1 and RTM_IN1 can be replaced to LCLS2.
+
+ex)
+crossbarControl("BP", "LCLS2") means route LCLS2 timing stream from RTM_IN1 to backplane
+
+
+
+
+
+
+
+   
