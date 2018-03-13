@@ -77,8 +77,35 @@ crossbarControl("BP", "LCLS2") means route LCLS2 timing stream from RTM_IN1 to b
 
 
 
+-------------------------
+- How to use PV interface
+-------------------------
+
+1. Use crossbarControlAsynDriverConfigure() command to intialize the driver
+The command requires asyn port name and path name for AmcCarrierCore/AxiSy56040.
+
+ex)
+crossbarControlAsynDriverConfigure("crossbar", "mmio/AmcCarrierTimingGenerator/AmcCarrierCore/AxiSy56040")
+
+2. How to bring up the database template
+Use crossbarCtrl.db template with DEV and PORT macro. 
+The DEV is pre-fix for PV name and PORT should be matched 
+with the asyn port name in driver initialization
+
+ex)
+dbLoadRecords("db/crossbarCtrl.db", "DEV=TPG:SYS2:2,PORT=crossbar")
+
+Then, you can get the following PVs.
+
+TPG:SYS2:2:OUTPUTCONFIG0
+TPG:SYS2:2:OUTPUTCONFIG1
+TPG:SYS2:2:OUTPUTCONFIG2
+TPG:SYS2:2:OUTPUTCONFIG3
+
+Each of them corresponds to a particual crossbar switch and you can choose 4 different input
+independentally.
 
 
-
-
+3. Misc
+The database template has an info field for autosave. Thus, the set value will be stored into autosave. 
    
