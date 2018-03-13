@@ -108,4 +108,6 @@ independentally.
 
 3. Misc
 The database template has an info field for autosave. Thus, the set value will be stored into autosave. 
-   
+The corssbarControlAsynDriverConfigure() also brings up the command line interface. If you intialize driver with 
+corssbarControlAsynDriverConfigure(), you can use both PV interface and command line interface.
+But, if you initialize driver with crossbarControlDriverConfigure(), it only allow o use command line interface.
