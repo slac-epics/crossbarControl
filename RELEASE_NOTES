@@ -11,5 +11,15 @@
 #--------------------------------------------------------------
 #
 #
+R1.0.1    Kukhee Kim (KHKIM) 
+          - review PV naming convention with naming CZARs.
+          - add 4th field for crossbar switch intance index
+          ex) crossbar switch in TPG
+        	TPG:SYS2:1:TCRB0:OUTPUTCONFIG
+        	TPG:SYS2:1:TCRB1:OUTPUTCONFIG
+        	TPG:SYS2:1:TCRB2:OUTPUTCONFIG
+        	TPG:SYS2:1:TCRB3:OUTPUTCONFIG
+
+
 R1.0.0    Kukhee Kim (KHKIM)
           - Initial Release
