@@ -93,14 +93,14 @@ The DEV is pre-fix for PV name and PORT should be matched
 with the asyn port name in driver initialization
 
 ex)
-dbLoadRecords("db/crossbarCtrl.db", "DEV=TPG:SYS2:2,PORT=crossbar")
+dbLoadRecords("db/crossbarCtrl.db", "DEV=MY_IOC,PORT=crossbar")
 
 Then, you can get the following PVs.
 
-TPG:SYS2:2:OUTPUTCONFIG0
-TPG:SYS2:2:OUTPUTCONFIG1
-TPG:SYS2:2:OUTPUTCONFIG2
-TPG:SYS2:2:OUTPUTCONFIG3
+MY_IOC:TCRB0:OUTPUTCONFIG0
+MY_IOC:TCRB1:OUTPUTCONFIG1
+MY_IOC:TCRB2:OUTPUTCONFIG2
+MY_IOC:TCRB3:OUTPUTCONFIG3
 
 Each of them corresponds to a particual crossbar switch and you can choose 4 different input
 independentally.
