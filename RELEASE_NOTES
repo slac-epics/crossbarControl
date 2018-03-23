@@ -11,6 +11,10 @@
 #--------------------------------------------------------------
 #
 #
+R1.0.2    Kukhee Kim (KHKIM)
+          - bumpup cpsw/framework R3.6.3
+          - bumpup yamlLoader     R1.1.0
+
 R1.0.1    Kukhee Kim (KHKIM) 
           - review PV naming convention with naming CZARs.
           - add 4th field for crossbar switch intance index
