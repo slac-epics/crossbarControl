@@ -97,10 +97,10 @@ dbLoadRecords("db/crossbarCtrl.db", "DEV=MY_IOC,PORT=crossbar")
 
 Then, you can get the following PVs.
 
-MY_IOC:TCRB0:OUTPUTCONFIG0
-MY_IOC:TCRB1:OUTPUTCONFIG1
-MY_IOC:TCRB2:OUTPUTCONFIG2
-MY_IOC:TCRB3:OUTPUTCONFIG3
+MY_IOC:TCRB0:OUTPUTCONFIG
+MY_IOC:TCRB1:OUTPUTCONFIG
+MY_IOC:TCRB2:OUTPUTCONFIG
+MY_IOC:TCRB3:OUTPUTCONFIG
 
 Each of them corresponds to a particual crossbar switch and you can choose 4 different input
 independentally.
