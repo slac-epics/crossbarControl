@@ -19,7 +19,8 @@ CHECK_RELEASE = YES
 # Set this when you only want to compile this application
 #   for a subset of the cross-compiled target architectures
 #   that Base is built for.
-CROSS_COMPILER_TARGET_ARCHS = linuxRT-x86_64
+ALL_X_TA:=$(CROSS_COMPILER_TARGET_ARCHS)
+CROSS_COMPILER_TARGET_ARCHS = $(filter linuxRT-x86_64,$(ALL_X_TA))
 
 
 # To install files into a location other than $(TOP) define
@@ -46,3 +47,4 @@ DIRECTORY_TARGETS += $(INSTALL_LOCATION_STARTUP)
 ## =============================
 SHARED_LIBRARIES=NO
 STATIC_BUILD=YES
+-include $(TOP)/../../CONFIG_SITE
