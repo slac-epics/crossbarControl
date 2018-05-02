@@ -11,6 +11,9 @@
 #--------------------------------------------------------------
 #
 #
+R1.0.4    Kukhee Kim
+          - bump up cpsw/framework R3.6.4
+
 R1.0.3    K. Kim
           - fix typo in source code: the mistakes bothers to control RTM_OUT1 in command line
           - force tag to R1.0.3
