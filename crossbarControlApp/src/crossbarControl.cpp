@@ -98,7 +98,7 @@ void CrossbarControlDriver::Control(const char *output_name, const char *source_
         case 0: pCrossbarApi->SetOutputConfig0((uint32_t) source); break;
         case 1: pCrossbarApi->SetOutputConfig1((uint32_t) source); break;
         case 2: pCrossbarApi->SetOutputConfig2((uint32_t) source); break;
-        case 3: pCrossbarApi->SetOutputConfig2((uint32_t) source); break;
+        case 3: pCrossbarApi->SetOutputConfig3((uint32_t) source); break;
     }
     
 }
