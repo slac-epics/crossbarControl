@@ -11,6 +11,9 @@
 #--------------------------------------------------------------
 #
 #
+R1.0.5    Carolina Bianchini
+	  - Added crossbar alarm summary + autosave ZRSV/ONSV/TWSV/THSV
+
 R1.0.4    Kukhee Kim
           - bump up cpsw/framework R3.6.4
 
