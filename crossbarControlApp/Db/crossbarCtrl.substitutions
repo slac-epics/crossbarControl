@@ -5,3 +5,9 @@ file "crossbarControl.db" {
             {  "$(DEV)",  "$(PORT)",  "2",   "Output control for BP"          }
             {  "$(DEV)",  "$(PORT)",  "3",   "Output control for RTM_OUT1"    }
 }
+
+file "crossbarAlarm.db" {
+    pattern {     DEVICE    }
+            {    "$(DEV)"   }
+}
+

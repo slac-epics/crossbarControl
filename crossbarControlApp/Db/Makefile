@@ -12,6 +12,7 @@ include $(TOP)/configure/CONFIG
 # databases, templates, substitutions like this
 
 DB += crossbarControl.db
+DB += crossbarAlarm.db
 DB += crossbarCtrl.db
 
 # =======================================================================
