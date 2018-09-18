@@ -11,6 +11,11 @@
 #--------------------------------------------------------------
 #
 #
+R1.0.5    Sep 18,2018    Kukhee Kim 
+          - frace tag
+          - bug fix on the alarm summary PV in crossbarControlControl.db template.
+          - build with cpsw/framework R3.6.6
+
 R1.0.5    Carolina Bianchini
 	  - Added crossbar alarm summary + autosave ZRSV/ONSV/TWSV/THSV
 
