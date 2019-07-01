@@ -11,7 +11,7 @@
 #--------------------------------------------------------------
 #
 R1.0.7    Jun 25, 2019   Kukhee Kim
-          - build with cpsw/framework R4.1.0 and yamlLoader R1.1.3
+          - build with cpsw/framework R4.1.1 and yamlLoader R1.1.3
 
 R1.0.6    Nov 8, 2018    Kukhee Kim
           - build with
