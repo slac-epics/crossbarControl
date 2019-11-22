@@ -10,6 +10,10 @@
 #  Rev:  dd-mmm-yyyy, Reviewer's Name    (USERNAME)
 #--------------------------------------------------------------
 #
+R1.1.0    Nov 22, 2019   Kukhee Kim
+          - build with yamlLoader R2.0.0 to support multiple blades
+          - implement named_root extension to support multiple blades
+
 R1.0.10   Nov 18, 2019   Kukhee Kim
           - build with asyn R4.32-1.0.0
 
