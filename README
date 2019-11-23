@@ -111,3 +111,28 @@ The database template has an info field for autosave. Thus, the set value will b
 The corssbarControlAsynDriverConfigure() also brings up the command line interface. If you intialize driver with 
 corssbarControlAsynDriverConfigure(), you can use both PV interface and command line interface.
 But, if you initialize driver with crossbarControlDriverConfigure(), it only allow o use command line interface.
+
+
+--------------------------------------
+- How to use for multiple blade system
+--------------------------------------
+
+Prepare hierarchy for multiple blades.
+Please, check README file in yamlLoader driver (R2.0.0 or above)
+
+ex)
+	cd  ${YAML_DIR0}
+	cpswLoadYamlFile("000TopLevel.yaml", "NetIODev", "", "10.0.3.102", "root_slot2")
+	cd  ${YAML_DIR1}
+	cpswLoadYamlFile("000TopLevel.yaml", "NetIODev", "", "10.0.3.103", "root_slot3")
+	cd  ${YAML_DIR2}
+	cpswLoadYamlFile("000TopLevel.yaml", "NetIODev", "", "10.0.3.104", "root_slot4")
+
+
+Use drive configure command with optional argument (very last argument, describe named_root)
+ex)
+crossbarControlAsynDriverConfigure("crossbar0", "mmio/AmcCarrierTimingGenerator/AmcCarrierCore/AxiSy56040", "root_slot2")
+crossbarControlAsynDriverConfigure("crossbar1", "mmio/AmcCarrierTimingGenerator/AmcCarrierCore/AxiSy56040", "root_slot3")
+crossbarControlAsynDriverConfigure("crossbar2", "mmio/AmcCarrierTimingGenerator/AmcCarrierCore/AxiSy56040", "root_slot4")
+
+-
