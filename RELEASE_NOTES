@@ -10,6 +10,9 @@
 #  Rev:  dd-mmm-yyyy, Reviewer's Name    (USERNAME)
 #--------------------------------------------------------------
 #
+R1.3.1    Nov 15, 2021   Carolina Bianchini Mattison 
+	  - build with asynDriver R4.39-1.0.0
+
 R1.3.0    Nov 9, 2021    Carolina Bianchini Mattison
 	  - build with yamlLoader R2.2.0 and asynDriver R4.39-0.0.1
 
