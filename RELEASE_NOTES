@@ -10,6 +10,10 @@
 #  Rev:  dd-mmm-yyyy, Reviewer's Name    (USERNAME)
 #--------------------------------------------------------------
 #
+R1.2.0-br-0-1    Nov 15, 2021    Sonya Hoobler
+          - Use YAMLLOADER_MODULE_VERSION=R2.2.0 (to facilitate
+            using tprTrigger R2.5.0 and associated modules
+
 R1.2.0    Feb 4, 2020    Kukhee Kim
           - build with yamlLoader R2.1.0, cpsw/framework R4.4.1 and buildroot-2019.08
 
