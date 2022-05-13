@@ -10,6 +10,9 @@
 #  Rev:  dd-mmm-yyyy, Reviewer's Name    (USERNAME)
 #--------------------------------------------------------------
 #
+R1.2.0-1.0 May 12, 2022    Kukhee Kim
+          - build with yamlLoader R2.1.0-1.0, cpsw/framework R4.4.1 and buildroot-2019.08
+
 R1.2.0    Feb 4, 2020    Kukhee Kim
           - build with yamlLoader R2.1.0, cpsw/framework R4.4.1 and buildroot-2019.08
 
