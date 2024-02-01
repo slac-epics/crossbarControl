@@ -10,6 +10,10 @@
 #  Rev:  dd-mmm-yyyy, Reviewer's Name    (USERNAME)
 #--------------------------------------------------------------
 #
+R1.3.2    Feb 1, 2024   Kyle Leleux (kleleux)
+          - build with asynDriver R4.39-1.0.1 and yamlLoader 2.3.5
+                * needed for merge of BunchLengthMonitor and BunchLengthMonitor_MR
+
 R1.3.1    Nov 15, 2021   Carolina Bianchini Mattison 
 	  - build with asynDriver R4.39-1.0.0
 

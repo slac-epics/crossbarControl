@@ -19,8 +19,8 @@
 # Don't set your version to anything such as "test" that
 # could match a directory name.
 # ==========================================================
-ASYN_MODULE_VERSION=R4.39-1.0.0
-YAMLLOADER_MODULE_VERSION=R2.2.0
+ASYN_MODULE_VERSION=R4.39-1.0.1
+YAMLLOADER_MODULE_VERSION=R2.3.5
 
 # ============================================================
 # Dependent Modules: Need event module to pass timestamp from 
